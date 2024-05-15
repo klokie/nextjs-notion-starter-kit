@@ -4,10 +4,11 @@ export default siteConfig({
   // the site's root Notion page (required)
   // https://klokie.notion.site/Portfolio-e84239bffb1743c194d4615537673cce?pvs=4
   rootNotionPageId: 'e84239bffb1743c194d4615537673cce',
+  // rootNotionPageId: '11a13c9e66e64f77a6210cfbe0422eac',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
-  rootNotionSpaceId: null,
+  rootNotionSpaceId: 'klokie',
 
   // basic site info (required)
   name: 'Klokie.com',
