@@ -207,6 +207,13 @@
   /* justify-content: center; */
 }
 
+/* hide .notion-collection-row-property if it contains a .notion-collection-row-value > span that is empty */
+.notion-collection-row-property:contains(
+    .notion-collection-row-value span:empty
+  ) {
+  display: none;
+}
+
 .notion-collection-page-properties .notion-property-checkbox {
   display: none;
 }

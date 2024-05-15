@@ -58,6 +58,59 @@ export default class MyDocument extends Document {
     localStorage.setItem(storageKey, JSON.stringify(isDarkMode))
   }
 })();
+(function () {
+/** hide empty Notion property rows  */
+
+document.addEventListener("DOMContentLoaded", function() {
+  function shouldHideTitle(element) {
+    switch (element.querySelector('.notion-collection-column-title-body').textContent.trim()) {
+      case 'Hide':
+      case 'Status':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  // Function to check and hide empty spans
+  function hideEmptySpanProperties() {
+    const elements = document.querySelectorAll('.notion-collection-row-property');
+    elements.forEach(function(element) {
+      const span = element.querySelector('.notion-collection-row-value > span');
+      if (span && span.textContent.trim() === '') {
+        element.style.display = 'none';
+      } else if (shouldHideTitle(element)){
+        element.style.display = 'none';
+      } else {
+        // element.style.display = ''; // Ensure it is visible if not empty
+      }
+    });
+  }
+
+  // Set up the MutationObserver
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList' || mutation.type === 'characterData') {
+        hideEmptySpanProperties(); // Re-check when changes occur
+      }
+    });
+  });
+
+  // Specify what to observe
+  const config = {
+    childList: true,
+    subtree: true,
+    characterData: true
+  };
+
+  // Start observing the body for changes in the DOM
+  observer.observe(document.body, config);
+
+  // Initial check in case elements already exist
+  hideEmptySpanProperties();
+});
+
+})();
 `
               }}
             />
