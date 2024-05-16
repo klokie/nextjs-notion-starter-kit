@@ -17,7 +17,7 @@
 }
 
 .notion-page {
-  padding-bottom: calc(max(5vh, 32px)) !important;
+  padding-bottom: calc(max(5vh, 24px)) !important;
   line-height: 1.65;
 }
 
@@ -64,6 +64,7 @@
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   grid-gap: 6vmin;
   gap: 6vmin;
+  grid-auto-rows: auto;
 }
 
 .notion-gallery-grid .notion-page-icon-inline {
@@ -110,12 +111,20 @@
 }
 
 .notion-collection-card-cover img {
-  border-radius: 16px;
   background-color: #fff;
 }
 
 .notion-collection-card:hover .notion-collection-card-cover {
   filter: brightness(120%);
+  transition-property: box-shadow, border-radius;
+  transition-duration: 100ms;
+}
+
+.notion-collection-card:hover .notion-collection-card-cover,
+.notion-collection-card:hover img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
 }
 
 .notion-collection-card-cover span {
