@@ -44,7 +44,7 @@ This project requires a recent version of Node.js (we recommend >= 16).
 
 1. Fork / clone this repo
 2. Change a few values in [site.config.ts](./site.config.ts)
-3. `pnpm install`
+3. `pnpm install` to install dependencies
 4. `pnpm run dev` to test locally
 5. `pnpm run deploy` to deploy to vercel 💪
 
