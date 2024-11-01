@@ -1,11 +1,12 @@
+import ExpiryMap from 'expiry-map'
+import { getAllPagesInSpace, getPageProperty, uuidToId } from 'notion-utils'
+import pMemoize from 'p-memoize'
+
 import * as config from './config'
 import { includeNotionIdInUrls } from './config'
 import { getCanonicalPageId } from './get-canonical-page-id'
 import { notion } from './notion-api'
 import type * as types from './types'
-import ExpiryMap from 'expiry-map'
-import { getAllPagesInSpace, getPageProperty, uuidToId } from 'notion-utils'
-import pMemoize from 'p-memoize'
 
 const uuid = !!includeNotionIdInUrls
 const cache = new ExpiryMap(10000)

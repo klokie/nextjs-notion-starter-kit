@@ -1,5 +1,5 @@
-import type * as React from 'react'
 import cs from 'classnames'
+import type * as React from 'react'
 
 import * as config from '@/lib/config'
 
