@@ -1,6 +1,7 @@
-import bundleAnalyzer from '@next/bundle-analyzer'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+
+import bundleAnalyzer from '@next/bundle-analyzer'
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true'
