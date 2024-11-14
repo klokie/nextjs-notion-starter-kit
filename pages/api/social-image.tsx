@@ -1,5 +1,6 @@
 import ky from 'ky'
 import { type NextApiRequest, type NextApiResponse } from 'next'
+import Image from 'next/image'
 import { ImageResponse } from 'next/og'
 import { type PageBlock } from 'notion-types'
 import {
@@ -55,27 +56,10 @@ export default async function OGImage(
         }}
       >
         {pageInfo.image && (
-          <img
+          <Image
             src={pageInfo.image}
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover'
-              // TODO: satori doesn't support background-size: cover and seems to
-              // have inconsistent support for filter + transform to get rid of the
-              // blurred edges. For now, we'll go without a blur filter on the
-              // background, but Satori is still very new, so hopefully we can re-add
-              // the blur soon.
-
-              // backgroundImage: pageInfo.image
-              //   ? `url(${pageInfo.image})`
-              //   : undefined,
-              // backgroundSize: '100% 100%'
-              // TODO: pageInfo.imageObjectPosition
-              // filter: 'blur(8px)'
-              // transform: 'scale(1.05)'
-            }}
+            layout='fill'
+            objectFit='cover'
             alt='cover image'
           />
         )}
@@ -141,13 +125,9 @@ export default async function OGImage(
               zIndex: '5'
             }}
           >
-            <img
+            <Image
               src={pageInfo.authorImage}
-              style={{
-                width: '100%',
-                height: '100%'
-                // transform: 'scale(1.04)'
-              }}
+              layout='fill'
               alt='author image'
             />
           </div>

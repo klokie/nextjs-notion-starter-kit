@@ -4,8 +4,8 @@ import pMap from 'p-map'
 import pMemoize from 'p-memoize'
 import { getTweet as getTweetData } from 'react-tweet/api'
 
-import type { ExtendedTweetRecordMap } from './types'
 import { db } from './db'
+import type { ExtendedTweetRecordMap } from './types'
 
 export async function getTweetsMap(
   recordMap: ExtendedRecordMap
