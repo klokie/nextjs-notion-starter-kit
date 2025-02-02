@@ -2,24 +2,25 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  // https://klokie.notion.site/Portfolio-e84239bffb1743c194d4615537673cce?pvs=4
+  rootNotionPageId: 'e84239bffb1743c194d4615537673cce',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: 'Klokie.com',
+  domain: 'klokie.com',
+  author: 'Daniel “Klokie” Grossfeld',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: `Daniel “Klokie” Grossfeld is a senior Web architect, full-stack developer and entrepreneur with 25+ years of experience engineering and designing complex data-driven websites, e-commerce, and media distribution systems within the music, video, online and print publishing, and fashion industries.`,
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  twitter: 'klokie',
+  github: 'klokie',
+  linkedin: 'klokie',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
