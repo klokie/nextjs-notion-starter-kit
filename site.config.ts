@@ -4,7 +4,6 @@ export default siteConfig({
   // the site's root Notion page (required)
   // https://klokie.notion.site/Portfolio-e84239bffb1743c194d4615537673cce?pvs=4
   rootNotionPageId: 'e84239bffb1743c194d4615537673cce',
-  // rootNotionPageId: '11a13c9e66e64f77a6210cfbe0422eac',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -13,10 +12,10 @@ export default siteConfig({
   // basic site info (required)
   name: 'Klokie.com',
   domain: 'klokie.com',
-  author: 'Daniel “Klokie” Grossfeld',
+  author: 'Daniel "Klokie" Grossfeld',
 
   // open graph metadata (optional)
-  description: `Daniel “Klokie” Grossfeld is a senior Web architect, full-stack developer and entrepreneur with 25+ years of experience engineering and designing complex data-driven websites, e-commerce, and media distribution systems within the music, video, online and print publishing, and fashion industries.`,
+  description: `Daniel "Klokie" Grossfeld is a senior Web architect, full-stack developer and entrepreneur with 25+ years of experience engineering and designing complex data-driven websites, e-commerce, and media distribution systems within the music, video, online and print publishing, and fashion industries.`,
 
   // social usernames (optional)
   twitter: 'klokie',
