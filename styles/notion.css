@@ -110,7 +110,6 @@
   display: flex;
 }
 
-<<<<<<< HEAD
 .notion-collection-card-cover,
 .notion-collection-card-cover img {
   background-color: #fff;
@@ -118,11 +117,8 @@
 
 .notion-collection-card-cover img {
   object-fit: contain !important;
-=======
-.notion-collection-card-cover img {
   border-radius: 16px;
   background-color: #fff;
->>>>>>> 8a20bf2 (feat: customized portfolio for klokie.com)
 }
 
 .notion-collection-card:hover .notion-collection-card-cover {
