@@ -42,6 +42,9 @@ importers:
       fathom-client:
         specifier: ^3.4.1
         version: 3.7.2
+      ioredis:
+        specifier: ^5.8.2
+        version: 5.8.2
       ky:
         specifier: ^1.7.2
         version: 1.7.2
@@ -305,6 +308,9 @@ packages:
 
   '@ioredis/commands@1.2.0':
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
+
+  '@ioredis/commands@1.4.0':
+    resolution: {integrity: sha512-aFT2yemJJo+TZCmieA7qnYGQooOS7QfNmYrzGtsYd3g9j5iDP8AimYYAesf79ohjbLG12XxC4nG5DyEnC88AsQ==}
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
@@ -1384,6 +1390,10 @@ packages:
 
   ioredis@5.3.2:
     resolution: {integrity: sha512-1DKMMzlIHM02eBBVOFQ1+AolGjs6+xEcM4PDL7NqOS6szq7H9jSaEkIUH6/a5Hl241LzW6JLSiAbNvTQjUupUA==}
+    engines: {node: '>=12.22.0'}
+
+  ioredis@5.8.2:
+    resolution: {integrity: sha512-C6uC+kleiIMmjViJINWk80sOQw5lEzse1ZmvD+S/s8p8CWapftSaC+kocGTx6xrbrJ4WmYQGC08ffHLr6ToR6Q==}
     engines: {node: '>=12.22.0'}
 
   is-array-buffer@3.0.4:
@@ -2764,6 +2774,8 @@ snapshots:
 
   '@ioredis/commands@1.2.0': {}
 
+  '@ioredis/commands@1.4.0': {}
+
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
   '@keyvhq/core@1.6.26':
@@ -4108,6 +4120,20 @@ snapshots:
   ioredis@5.3.2:
     dependencies:
       '@ioredis/commands': 1.2.0
+      cluster-key-slot: 1.1.2
+      debug: 4.3.7
+      denque: 2.1.0
+      lodash.defaults: 4.2.0
+      lodash.isarguments: 3.1.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
+      standard-as-callback: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+
+  ioredis@5.8.2:
+    dependencies:
+      '@ioredis/commands': 1.4.0
       cluster-key-slot: 1.1.2
       debug: 4.3.7
       denque: 2.1.0
