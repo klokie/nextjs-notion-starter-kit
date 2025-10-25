@@ -1,5 +1,5 @@
-import { type NextApiRequest, type NextApiResponse } from 'next'
 import IORedis from 'ioredis'
+import { type NextApiRequest, type NextApiResponse } from 'next'
 
 import { isRedisEnabled, redisHost, redisPassword } from '@/lib/config'
 
